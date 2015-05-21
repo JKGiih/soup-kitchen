@@ -1,0 +1,1041 @@
+(dp0
+S'buildDestination'
+p1
+VE:\u005cKoodi\u005cTwine\u005cSoupKitchen01\u005csoup_kitchen.html
+p2
+sS'saveDestination'
+p3
+VE:\u005cKoodi\u005cTwine\u005csoup_kitchen.tws
+p4
+sS'metadata'
+p5
+(dp6
+sS'target'
+p7
+S'responsive'
+p8
+sS'storyPanel'
+p9
+(dp10
+S'widgets'
+p11
+(lp12
+(dp13
+S'selected'
+p14
+I01
+sS'pos'
+p15
+(lp16
+F6.363945578231289
+aF14.0
+asS'passage'
+p17
+(itiddlywiki
+Tiddler
+p18
+(dp20
+S'text'
+p21
+V<<nobr>>\u000a	<<set $potatoes to 6>>\u000a	<<set $onions to 2>>\u000a	<<set $meatballs to 10>>\u000a	<<set $water to 10>>\u000a	<<set $soup to 5>>\u000a	<<set $customers to 7>>\u000a	<<set $customersfed to 0>>\u000a	<<set $day to 1>>\u000a	<<set $hour to 12>>\u000a	<<set $tiredness to 0>>\u000a	<<set $justvisitedrandom to true>>\u000a<<endnobr>>\u000a<span>W</span>elcome to Soup Kitchen Manager!\u000a\u000aThank you for showing interest in soup kitchens. Soup kitchens are where the victims of capitalism go to eat. There are many victims of capitalism in today's society: the homeless, the unemployed, the students, the artists... all of these poor tortured souls are victims of capitalism.\u000a\u000aYet our deranged governments keep sending money and doctors to developing countries such as Africa to push them towards the same consumerist decadence that is driving our children to madhouses and animals to extinction. The only comfort in this time of decay is that within a hundred years or so humans will have used up all natural resources on the planet, resorted to cannibalism and finally starved to death. This much is evident to any serious biologist.\u000a\u000aThat said, running a soup kitchen is an admirable but challenging endeavour. You will have to carefully balance your time between preparing soup, serving soup and collecting ingredients for soup. Furthermore your soup kitchen only has a limited number of seats, one hundred to be exact. If and when the number of hungry mouths exceeds the number of seats, your career will be over... by a necessity which requires no further explanation.\u000a\u000aDon't be discouraged, however, if you don't last for long. After all, you are only human.\u000a\u000a--------------------\u000a\u000a[[Begin|Main]]
+p22
+sS'title'
+p23
+VStart
+p24
+sS'modified'
+p25
+ctime
+struct_time
+p26
+((I2015
+I5
+I2
+I23
+I57
+I22
+I5
+I122
+I1
+tp27
+(dp28
+tp29
+Rp30
+sS'tags'
+p31
+(lp32
+sS'created'
+p33
+g26
+((I2015
+I4
+I22
+I17
+I1
+I42
+I2
+I112
+I1
+tp34
+(dp35
+tp36
+Rp37
+sbsa(dp38
+g14
+I00
+sg15
+(lp39
+F11.0
+aF150.0
+asg17
+(itiddlywiki
+Tiddler
+p40
+(dp41
+g21
+VSoup Kitchen Manager 0.1
+p42
+sg23
+VStoryTitle
+p43
+sg25
+g26
+((I2015
+I4
+I27
+I17
+I12
+I52
+I0
+I117
+I1
+tp44
+(dp45
+tp46
+Rp47
+sg31
+(lp48
+sg33
+g26
+((I2015
+I4
+I22
+I17
+I1
+I42
+I2
+I112
+I1
+tp49
+(dp50
+tp51
+Rp52
+sbsa(dp53
+g14
+I00
+sg15
+(lp54
+I10
+aI290
+asg17
+(itiddlywiki
+Tiddler
+p55
+(dp56
+g21
+VHorsesoft\u000aAll Rights Reversed
+p57
+sg23
+VStoryAuthor
+p58
+sg25
+g26
+((I2015
+I4
+I22
+I20
+I5
+I10
+I2
+I112
+I1
+tp59
+(dp60
+tp61
+Rp62
+sg31
+(lp63
+sg33
+g26
+((I2015
+I4
+I22
+I17
+I1
+I42
+I2
+I112
+I1
+tp64
+(dp65
+tp66
+Rp67
+sbsa(dp68
+g14
+I00
+sg15
+(lp69
+F886.4670668556865
+aF133.18197278911578
+asg17
+(itiddlywiki
+Tiddler
+p70
+(dp71
+g21
+V<<nobr>>\u000a	<<if $potatoes >= 3>>\u000a		<<set $notenoughpotatoes to false>>\u000a	<<else>>\u000a		<<set $notenoughpotatoes to true>>\u000a	<<endif>>\u000a	<<if $onions >= 1>>\u000a		<<set $notenoughonions to false>>\u000a	<<else>>\u000a		<<set $notenoughonions to true>>\u000a	<<endif>>\u000a	<<if $meatballs >= 5>>\u000a		<<set $notenoughmeatballs to false>>\u000a	<<else>>\u000a		<<set $notenoughmeatballs to true>>\u000a	<<endif>>\u000a	<<if $water >= 1>>\u000a		<<set $notenoughwater to false>>\u000a	<<else>>\u000a		<<set $notenoughwater to true>>\u000a	<<endif>>\u000a	<<if $notenoughpotatoes is false and $notenoughonions is false and $notenoughmeatballs is false and $notenoughwater is false>>\u000a		<<set $potatoes to $potatoes - 3>>\u000a		<<set $onions to $onions - 1>>\u000a		<<set $meatballs to $meatballs - 5>>\u000a		<<set $water to $water - 1>>\u000a		<<set $soup to $soup + 1>>\u000a		<<set $hour to $hour + 1>>\u000a		<<if $hour is 24>>\u000a			<<set $hour to 0>>\u000a			<<set $day to $day + 1>>\u000a		<<endif>>\u000a		<<set $newcustomers to random(0,3)>>\u000a		<<set $customers to $customers + $newcustomers>>\u000a		<<set $tiredness to $tiredness + random(6,10)>>\u000a		<<set $cooked to true>>\u000a	<<else>>\u000a		<<set $cooked to false>>\u000a	<<endif>>\u000a	<<set $justvisitedrandom to false>>\u000a<<endnobr>>\u000a<<DayAndTime>>\u000a<<Inventory>>\u000a<<if $cooked is true>>\u000a	You made 1 litre of soup.\u000a\u000a	While you were cooking, <<print $newcustomers>> new hungry mouths arrived.\u000a	<<if $customers >= 100>>\u000a		Your soup kitchen has too many hungry mouths in it.\u000a\u000a		[[GAME OVER|End]]\u000a	<<elseif $customers >= 90>>\u000a		Your soup kitchen is getting dangerously full of hungry mouths.\u000a\u000a		[[Cook more|Cook]]\u000a		[[Done cooking|Main]]\u000a	<<else>>\u000a		[[Cook more|Cook]]\u000a		[[Done cooking|Main]]\u000a	<<endif>>\u000a<<else>><<nobr>>\u000a<<if $notenoughpotatoes is true>>\u000a<br>You haven't enough potatoes.<br>\u000a<<endif>>\u000a<<if $notenoughonions is true>>\u000a<br>You haven't enough onions.<br>\u000a<<endif>>\u000a<<if $notenoughmeatballs is true>>\u000a<br>You haven't enough meatballs.<br>\u000a<<endif>>\u000a<<if $notenoughwater is true>>\u000a<br>You haven't enough water.<br>\u000a<<endif>>\u000a<<endnobr>>\u000a[[OK|Main]]\u000a<<endif>>\u000a\u000a
+p72
+sg23
+VCook
+p73
+sg25
+g26
+((I2015
+I5
+I2
+I22
+I21
+I28
+I5
+I122
+I1
+tp74
+(dp75
+tp76
+Rp77
+sg31
+(lp78
+sg33
+g26
+((I2015
+I4
+I22
+I17
+I4
+I54
+I2
+I112
+I1
+tp79
+(dp80
+tp81
+Rp82
+sbsa(dp83
+g14
+I00
+sg15
+(lp84
+F738.0241196333822
+aF77.99999999999996
+asg17
+(itiddlywiki
+Tiddler
+p85
+(dp86
+g21
+V<<nobr>>\u000a	<<set $totalinventoryrange to (100 - ($potatoes + 1) % 100) / ($potatoes + 1) + (100 - ($onions + 1) % 100) / ($onions + 1) + (100 - ($meatballs + 1) % 100) / ($meatballs + 1) + (100 - ($water + 1) % 100) / ($water + 1)>>\u000a	<<set $itemfromrange to random(0,$totalinventoryrange)>>\u000a	<<if $itemfromrange <= (100 - ($potatoes + 1) % 100) / ($potatoes + 1)>>\u000a		<<set $collecteditem to "potatoes">>\u000a	<<elseif $itemfromrange <= (100 - ($potatoes + 1) % 100) / ($potatoes + 1) + (100 - ($onions + 1) % 100) / ($onions + 1)>>\u000a		<<set $collecteditem to "onions">>\u000a	<<elseif $itemfromrange <= (100 - ($potatoes + 1) % 100) / ($potatoes + 1) + (100 - ($onions + 1) % 100) / ($onions + 1) + (100 - ($meatballs + 1) % 100) / ($meatballs + 1)>>\u000a		<<set $collecteditem to "meatballs">>\u000a	<<else>>\u000a		<<set $collecteditem to "litres of water">>\u000a	<<endif>>\u000a    <<set $collectedamount to random(0,3)>>\u000a	<<if $collecteditem is "potatoes">>\u000a		<<set $collectedamount to $collectedamount * 3 + random(2,6)>>\u000a		<<set $potatoes to $potatoes + $collectedamount>>\u000a	<<elseif $collecteditem is "onions">>\u000a		<<set $collectedamount to $collectedamount * 1 + random(1,3)>>\u000a		<<set $onions to $onions + $collectedamount>>\u000a	<<elseif $collecteditem is "meatballs">>\u000a		<<set $collectedamount to $collectedamount * 5 + random(1,3)>>\u000a		<<set $meatballs to $meatballs + $collectedamount>>\u000a	<<elseif $collecteditem is "litres of water">>\u000a		<<set $collectedamount to $collectedamount * 1 + random(1,3)>>\u000a		<<set $water to $water + $collectedamount>>\u000a	<<endif>>\u000a	<<set $hour to $hour + 1>>\u000a	<<if $hour is 24>>\u000a		<<set $hour to 0>>\u000a		<<set $day to $day + 1>>\u000a	<<endif>>\u000a	<<set $newcustomers to random(0,3)>>\u000a	<<set $customers to $customers + $newcustomers>>\u000a	<<set $tiredness to $tiredness + random(6,10)>>\u000a	<<set $justvisitedrandom to false>>\u000a<<endnobr>>\u000a<<DayAndTime>>\u000a<<Inventory>>\u000a\u000aYou collected <<print $collectedamount>> <<print $collecteditem>>.\u000a\u000aWhile you were collecting, <<print $newcustomers>> new hungry mouths arrived.\u000a<<if $customers >= 100>>\u000a	Your soup kitchen has too many hungry mouths in it.\u000a\u000a	[[GAME OVER|End]]\u000a<<elseif $customers >= 90>>\u000a	Your soup kitchen is getting dangerously full of hungry mouths.\u000a\u000a	[[Collect more|Collect]]\u000a	[[Done collecting|Main]]\u000a<<else>>\u000a	[[Collect more|Collect]]\u000a	[[Done collecting|Main]]\u000a<<endif>>\u000a\u000a
+p87
+sg23
+VCollect
+p88
+sg25
+g26
+((I2015
+I5
+I2
+I22
+I21
+I15
+I5
+I122
+I1
+tp89
+(dp90
+tp91
+Rp92
+sg31
+(lp93
+sg33
+g26
+((I2015
+I4
+I22
+I17
+I11
+I30
+I2
+I112
+I1
+tp94
+(dp95
+tp96
+Rp97
+sbsa(dp98
+g14
+I00
+sg15
+(lp99
+F214.5776209181214
+aF11.800400189019165
+asg17
+(itiddlywiki
+Tiddler
+p100
+(dp101
+g21
+V<<nobr>>\u000a	<<set $randomevent to random(1,60)>>\u000a<<endnobr>>\u000a<<DayAndTime>>\u000a<<Inventory>>\u000a<<if $tiredness >= 100>>\u000a	You are tired.\u000a\u000a	[[Sleep|Sleep]]\u000a<<elseif $randomevent is 1 and not visited("Fire") and $customers < 80 and not $justvisitedrandom>>\u000a	You smell [[smoke.|Fire]] Somehow it doesn't seem like cigarettes.\u000a<<elseif $randomevent is 2 and not visited("Editor") and not $justvisitedrandom>>\u000a	Among the hungry mouths you spot [[an intelligent looking man.|Editor]]\u000a<<elseif $randomevent is 3 and not visited("PanicAttack") and $customers >= 4 and not $justvisitedrandom>>\u000a	Suddenly you feel [[an overwhelming sensation.|PanicAttack]]\u000a<<elseif $randomevent is 4 and not visited("FoodPoisoning") and $customers >= 4 and not $justvisitedrandom>>\u000a	Suddenly some of the hungry mouths begin to [[strangely twitch.|FoodPoisoning]]\u000a<<elseif $randomevent is 5 and not visited("GunFight") and $customers >= 9 and not $justvisitedrandom>>\u000a	[[Sounds of bedlam|GunFight]] echo from the room.\u000a<<elseif $randomevent is 6 and not visited("RoofLeak") and $customers >= 4 and not $justvisitedrandom>>\u000a	Suddenly you feel [[something moist|RoofLeak]] on your forehead.\u000a<<elseif $randomevent is 7 and not visited("Farmer") and $customers < 80 and not $justvisitedrandom>>\u000a	You hear [[a knock on the window.|Farmer]] Who could it be?\u000a<<else>>\u000a	[[Cook soup|Cook]]\u000a	[[Serve soup|Serve]]\u000a	[[Collect ingredients|Collect]]\u000a	[[Sleep|Sleep]]\u000a	<<nobr>>\u000a		<<set $justvisitedrandom to true>>\u000a	<<endnobr>>\u000a<<endif>>\u000a\u000a\u000a\u000a
+p102
+sg23
+VMain
+p103
+sg25
+g26
+((I2015
+I5
+I3
+I0
+I0
+I49
+I6
+I123
+I1
+tp104
+(dp105
+tp106
+Rp107
+sg31
+(lp108
+sg33
+g26
+((I2015
+I4
+I22
+I17
+I13
+I29
+I2
+I112
+I1
+tp109
+(dp110
+tp111
+Rp112
+sbsa(dp113
+g14
+I00
+sg15
+(lp114
+F1038.5153061224494
+aF224.30921369995153
+asg17
+(itiddlywiki
+Tiddler
+p115
+(dp116
+g21
+V<<nobr>>\u000a	<<if $soup < 1>>\u000a		<<set $notenoughsoup to true>>\u000a	<<else>>\u000a		<<set $notenoughsoup to false>>\u000a	<<endif>>\u000a	<<if $customers < 1>>\u000a		<<set $notenoughcustomers to true>>\u000a	<<else>>\u000a		<<set $notenoughcustomers to false>>\u000a	<<endif>>\u000a	<<if $notenoughsoup is false and $notenoughcustomers is false>>\u000a		<<set $soup to $soup - 1>>\u000a		<<set $customersserved to random(3,6)>>\u000a		<<set $customers to $customers - $customersserved>>\u000a		<<if $customers < 0>>\u000a			<<set $customersserved to $customersserved + $customers>>			\u000a			<<set $customers to 0>>\u000a		<<endif>>\u000a		<<set $customersfed to $customersfed + $customersserved>>\u000a		<<set $hour to $hour + 1>>\u000a		<<if $hour is 24>>\u000a			<<set $hour to 0>>\u000a			<<set $day to $day + 1>>\u000a		<<endif>>\u000a		<<set $newcustomers to random(0,3)>>\u000a		<<set $customers to $customers + $newcustomers>>\u000a		<<set $tiredness to $tiredness + random(6,10)>>\u000a		<<set $served to true>>\u000a	<<else>>\u000a		<<set $served to false>>\u000a	<<endif>>\u000a	<<set $justvisitedrandom to false>>\u000a<<endnobr>>\u000a<<DayAndTime>>\u000a<<Inventory>>\u000a<<if $served>>\u000a	You served <<print $customersserved>> hungry mouths.\u000a\u000a	While you were serving, <<print $newcustomers>> new hungry mouths arrived.\u000a	<<if $customers >= 100>>\u000a		Your soup kitchen has too many hungry mouths in it.\u000a\u000a		[[GAME OVER|End]]\u000a	<<elseif $customers >= 90>>\u000a		Your soup kitchen is getting dangerously full of \u000a	hungry mouths.\u000a\u000a		[[Serve more|Serve]]\u000a		[[Done serving|Main]]\u000a	<<else>>\u000a		[[Serve more|Serve]]\u000a		[[Done serving|Main]]\u000a	<<endif>>\u000a<<else>><<nobr>>\u000a<<if $notenoughsoup is true>>\u000a<br>You haven't enough soup.<br>\u000a<<endif>>\u000a<<if $notenoughcustomers is true>>\u000a<br>You haven't any hungry mouths.<br>\u000a<<endif>>\u000a<<endnobr>>\u000a[[OK|Main]]\u000a<<endif>>\u000a\u000a
+p117
+sg23
+VServe
+p118
+sg25
+g26
+((I2015
+I5
+I2
+I22
+I21
+I37
+I5
+I122
+I1
+tp119
+(dp120
+tp121
+Rp122
+sg31
+(lp123
+sg33
+g26
+((I2015
+I4
+I22
+I17
+I24
+I10
+I2
+I112
+I1
+tp124
+(dp125
+tp126
+Rp127
+sbsa(dp128
+g14
+I00
+sg15
+(lp129
+F914.1630487216636
+aF511.2021225277373
+asg17
+(itiddlywiki
+Tiddler
+p130
+(dp131
+g21
+V<<nobr>>\u000a	<<set $score to 2 * $day + 3 * ($customersfed + 100 - ($customersfed + 100) % 100) / 100>>\u000a	<<if $score < 1>>\u000a		<<set $score to 1>>\u000a	<<elseif $score > 99>>\u000a		<<set $score to 99>>\u000a	<<endif>>\u000a	<<if $score < 20>>\u000a		<<set $achievement to "an acceptable">>\u000a	<<elseif $score < 40>>\u000a		<<set $achievement to "a fairly decent">>\u000a	<<elseif $score < 60>>\u000a		<<set $achievement to "already a great">>\u000a	<<elseif $score < 80>>\u000a		<<set $achievement to "quite an impressive">>\u000a	<<elseif $score < 90>>\u000a		<<set $achievement to "no less than remarkable an">>\u000a	<<else>>\u000a		<<set $achievement to "an astonishing">>\u000a	<<endif>>\u000a<<endnobr>>\u000a<span>Y</span>ou survived for <<print $day>> days and fed <<print $customersfed>> hungry mouths.\u000a\u000aYou did better than <<print $score>>% of soup kitchen managers in the history of soup kitchens. One might say that's <<print $achievement>> achievement.\u000a\u000a--------------------\u000a\u000aThank you for playing Soup Kitchen Manager. This game was made to spread awareness about soup kitchens. As of now there are more than six hundred thousand soup kitchens in the world, the vast majority of them in Western countries.\u000a
+p132
+sg23
+VEnd
+p133
+sg25
+g26
+((I2015
+I5
+I3
+I0
+I34
+I52
+I6
+I123
+I1
+tp134
+(dp135
+tp136
+Rp137
+sg31
+(lp138
+sg33
+g26
+((I2015
+I4
+I22
+I18
+I31
+I11
+I2
+I112
+I1
+tp139
+(dp140
+tp141
+Rp142
+sbsa(dp143
+g14
+I00
+sg15
+(lp144
+F589.8727590891639
+aF22.30921369995176
+asg17
+(itiddlywiki
+Tiddler
+p145
+(dp146
+g21
+V<<nobr>>\u000a	<<set $sleep to random(4,11)>>\u000a	<<set $tiredness to $tiredness - 9 * $sleep>>\u000a	<<if $tiredness < 0>>\u000a		<<set $tiredness to 0>>\u000a	<<endif>>\u000a	<<if $tiredness >= 100>>\u000a		<<set $tiredness to 99>>\u000a	<<endif>>\u000a	<<set $hour to $hour + $sleep>>\u000a	<<if $hour >= 24>>\u000a		<<set $hour to $hour%24>>\u000a		<<set $day to $day + 1>>\u000a	<<endif>>\u000a	<<set $newcustomers to random(0,8)>>\u000a	<<set $customers to $customers + $newcustomers>>\u000a	<<set $justvisitedrandom to false>>\u000a<<endnobr>>\u000a<<DayAndTime>>\u000a<<Inventory>>\u000a\u000aYou slept for <<print $sleep>> hours.\u000a\u000aWhile you were sleeping, <<print $newcustomers>> new hungry mouths arrived.\u000a<<if $customers >= 100>>\u000a	Your soup kitchen has too many hungry mouths in it.\u000a\u000a	[[GAME OVER|End]]\u000a<<elseif $customers >= 90>>\u000a	Your soup kitchen is getting dangerously full of hungry mouths.\u000a\u000a	[[Sleep more|Sleep]]\u000a	[[Done sleeping|Main]]\u000a<<else>>\u000a	[[Sleep more|Sleep]]\u000a	[[Done sleeping|Main]]\u000a<<endif>>\u000a
+p147
+sg23
+VSleep
+p148
+sg25
+g26
+((I2015
+I5
+I2
+I22
+I40
+I8
+I5
+I122
+I1
+tp149
+(dp150
+tp151
+Rp152
+sg31
+(lp153
+sg33
+g26
+((I2015
+I4
+I22
+I21
+I6
+I7
+I2
+I112
+I1
+tp154
+(dp155
+tp156
+Rp157
+sbsa(dp158
+g14
+I00
+sg15
+(lp159
+F11.0
+aF430.0
+asg17
+(itiddlywiki
+Tiddler
+p160
+(dp161
+g21
+S'jquery:off\nhash:off\nbookmark:off\nmodernizr:off\nundo:off\nobfuscate:off\nexitprompt:off\nblankcss:off\n'
+p162
+sg23
+VStorySettings
+p163
+sg25
+g26
+((I2015
+I4
+I22
+I21
+I30
+I18
+I2
+I112
+I1
+tp164
+(dp165
+tp166
+Rp167
+sg31
+(lp168
+sg33
+g26
+((I2015
+I4
+I22
+I21
+I25
+I11
+I2
+I112
+I1
+tp169
+(dp170
+tp171
+Rp172
+sbsa(dp173
+g14
+I00
+sg15
+(lp174
+F32.84863945578231
+aF701.0595238095235
+asg17
+(itiddlywiki
+Tiddler
+p175
+(dp176
+g21
+V<<nobr>>\u000a	<<set $hour to $hour + 1>>\u000a	<<if $hour is 24>>\u000a		<<set $hour to 0>>\u000a		<<set $day to $day + 1>>\u000a	<<endif>>\u000a	<<set $customers to $customers + 1>>\u000a	<<set $justvisitedrandom to true>>\u000a<<endnobr>>\u000a<<DayAndTime>>\u000a<<Inventory>>\u000a\u000aLooking out the window to the street you see a woman making a fire out of twigs and newspapers, evidently intending to warm her hands or grill sausages.\u000a\u000aAware of the city's strict regulations you quickly open the window and beckon her in. It would have been a shame if she had gotten in trouble with the police for simply doing her best to survive.\u000a\u000a[[OK|Main]]\u000a
+p177
+sg23
+VFire
+p178
+sg25
+g26
+((I2015
+I5
+I3
+I0
+I2
+I9
+I6
+I123
+I1
+tp179
+(dp180
+tp181
+Rp182
+sg31
+(lp183
+sg33
+g26
+((I2015
+I4
+I23
+I0
+I44
+I14
+I3
+I113
+I1
+tp184
+(dp185
+tp186
+Rp187
+sbsa(dp188
+g14
+I00
+sg15
+(lp189
+F206.23979591836738
+aF769.513605442176
+asg17
+(itiddlywiki
+Tiddler
+p190
+(dp191
+g21
+V<<nobr>>\u000a	<<set $hour to $hour + 1>>\u000a	<<if $hour is 24>>\u000a		<<set $hour to 0>>\u000a		<<set $day to $day + 1>>\u000a	<<endif>>\u000a	<<set $justvisitedrandom to true>>\u000a<<endnobr>>\u000a<<DayAndTime>>\u000a<<Inventory>>\u000a\u000aYou promptly identify him as the editor of the renowned literary magazine Nervous Horse, Mr. Jürgen Kendall Giih himself!\u000a\u000aAs he notices you staring he turns away quickly, almost dropping his spoon awkwardly on the table. Could it be that a man of his stature is suffering from a severe case of social anxiety?\u000a\u000aYou deem it best not to approach him and ask for his autograph. Let him enjoy his meal, for that, as you know, is one of the few things in life worth enjoying.\u000a\u000a[[OK|Main]]
+p192
+sg23
+VEditor
+p193
+sg25
+g26
+((I2015
+I5
+I3
+I0
+I2
+I14
+I6
+I123
+I1
+tp194
+(dp195
+tp196
+Rp197
+sg31
+(lp198
+sg33
+g26
+((I2015
+I4
+I23
+I0
+I44
+I24
+I3
+I113
+I1
+tp199
+(dp200
+tp201
+Rp202
+sbsa(dp203
+g14
+I00
+sg15
+(lp204
+F359.2827633224056
+aF860.1546117723497
+asg17
+(itiddlywiki
+Tiddler
+p205
+(dp206
+g21
+V<<nobr>>\u000a	<<set $hour to $hour + 1>>\u000a	<<if $hour is 24>>\u000a		<<set $hour to 0>>\u000a		<<set $day to $day + 1>>\u000a	<<endif>>\u000a	<<set $customersreduced to ($customers - $customers % 4) /4>>\u000a	<<set $customers to $customers - $customersreduced>>\u000a	<<set $justvisitedrandom to true>>\u000a<<endnobr>>\u000a<<DayAndTime>>\u000a<<Inventory>>\u000a\u000aFor no obvious reason you begin trembling and sweating. It feels as if everyone in the soup kitchen was looking at you. In addition you have a sudden urge to urinate. Having studied psychology you realize these are the classic symptoms of a panic attack.\u000a\u000aResourcefully you lie down on the floor and take a couple of deep breaths. <<print $customersreduced>> of the hungry mouths, confused by your strange behaviour, flee in terror.\u000a\u000aDon't worry, it happens to the best of us.\u000a\u000a[[OK|Main]]
+p207
+sg23
+VPanicAttack
+p208
+sg25
+g26
+((I2015
+I5
+I3
+I0
+I2
+I22
+I6
+I123
+I1
+tp209
+(dp210
+tp211
+Rp212
+sg31
+(lp213
+sg33
+g26
+((I2015
+I4
+I27
+I17
+I8
+I2
+I0
+I117
+I1
+tp214
+(dp215
+tp216
+Rp217
+sbsa(dp218
+g14
+I00
+sg15
+(lp219
+F536.3078231292536
+aF933.3418367346933
+asg17
+(itiddlywiki
+Tiddler
+p220
+(dp221
+g21
+V<<nobr>>\u000a	<<set $hour to $hour + 1>>\u000a	<<if $hour is 24>>\u000a		<<set $hour to 0>>\u000a		<<set $day to $day + 1>>\u000a	<<endif>>\u000a	<<set $customersreduced to ($customers - $customers % 4) /4>>\u000a	<<set $customers to $customers - $customersreduced>>\u000a	<<set $justvisitedrandom to true>>\u000a<<endnobr>>\u000a<<DayAndTime>>\u000a<<Inventory>>\u000a\u000aIt seems that <<print $customersreduced>> hungry mouths have died of an unexpected food poisoning.\u000a\u000aThis minor stroke of luck will not, however, solve the global problem of overpopulation.\u000a\u000a[[OK|Main]]\u000a
+p222
+sg23
+VFoodPoisoning
+p223
+sg25
+g26
+((I2015
+I5
+I3
+I0
+I2
+I38
+I6
+I123
+I1
+tp224
+(dp225
+tp226
+Rp227
+sg31
+(lp228
+sg33
+g26
+((I2015
+I4
+I27
+I18
+I16
+I21
+I0
+I117
+I1
+tp229
+(dp230
+tp231
+Rp232
+sbsa(dp233
+g14
+I00
+sg15
+(lp234
+F52.52295918367346
+aF965.1743197278905
+asg17
+(itiddlywiki
+Tiddler
+p235
+(dp236
+g21
+V/* FONT DEFINITIONS */\u000a/* Generated by Font Squirrel (http://www.fontsquirrel.com) on March 28, 2014 */\u000a\u000a@font-face {\u000a    font-family: 'dearestregular';\u000a    src: url('fonts/Dearest-webfont.eot');\u000a    src: url('fonts/Dearest-webfont.eot?#iefix') format('embedded-opentype'),\u000a         url('fonts/Dearest-webfont.woff') format('woff'),\u000a         url('fonts/Dearest-webfont.ttf') format('truetype'),\u000a         url('fonts/Dearest-webfont.svg#dearestregular') format('svg');\u000a    font-weight: normal;\u000a    font-style: normal;\u000a\u000a}\u000a\u000a@font-face {\u000a    font-family: 'eb_garamond12_regular';\u000a    src: url('fonts/ebgaramond12-regular-webfont.eot');\u000a    src: url('fonts/ebgaramond12-regular-webfont.eot?#iefix') format('embedded-opentype'),\u000a         url('fonts/ebgaramond12-regular-webfont.woff') format('woff'),\u000a         url('fonts/ebgaramond12-regular-webfont.ttf') format('truetype'),\u000a         url('fonts/ebgaramond12-regular-webfont.svg#eb_garamond12_regular') format('svg');\u000a    font-weight: normal;\u000a    font-style: normal;\u000a\u000a}\u000a\u000a@font-face {\u000a    font-family: 'eb_garamond12_sc_regular';\u000a    src: url('fonts/ebgaramond12-sc-webfont.eot');\u000a    src: url('fonts/ebgaramond12-sc-webfont.eot?#iefix') format('embedded-opentype'),\u000a         url('fonts/ebgaramond12-sc-webfont.woff') format('woff'),\u000a         url('fonts/ebgaramond12-sc-webfont.ttf') format('truetype'),\u000a         url('fonts/ebgaramond12-sc-webfont.svg#eb_garamond12_sc_regular') format('svg');\u000a    font-weight: normal;\u000a    font-style: normal;\u000a\u000a}\u000a\u000a/* LINKS */\u000a\u000a.passage a:link {\u000a	color: #0000FF;\u000a	text-decoration: none;\u000a	}\u000a.passage a:visited {\u000a	color: #0000FF;\u000a	text-decoration: none;\u000a	}\u000a.passage a:hover {\u000a	color: #990000;\u000a	text-decoration: underline;\u000a	}\u000a.passage a:active {\u000a	color: #CC0000;\u000a	text-decoration: none;\u000a	} \u000a	\u000a/* BODY */\u000a\u000abody {\u000a    background-color:#d8bfd8;\u000a    font-size:100%;\u000a}\u000a\u000a/* HEADERS */\u000a\u000a#floater {\u000a  background-color:#202020;\u000a  color:#dfcddf;\u000a  font-family:eb_garamond12_sc_regular, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;\u000a  text-align:center;\u000a}\u000a\u000a#footer {\u000a  font-family:eb_garamond12_sc_regular, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;\u000a  margin-top:50px;\u000a  text-align:center;\u000a}\u000a\u000a#sidebar {\u000a  font-family:eb_garamond12_sc_regular, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;\u000a  text-align:center;\u000a}\u000a\u000a#storyTitle {\u000a  font-family:eb_garamond12_sc_regular, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;\u000a  text-align:center;\u000a}\u000a\u000a#storyAuthor {\u000a  font-family:eb_garamond12_sc_regular, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;\u000a  text-align:center;\u000a}\u000a\u000a#credits {\u000a  color: #202020;\u000a  font-family:eb_garamond12_sc_regular, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;\u000a  text-align:center;\u000a}\u000a\u000a#passages {\u000a	border: 0;\u000a}\u000a\u000a/* PARAGRAPHS */\u000a\u000a.passage {\u000a  font-family:eb_garamond12_regular, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;\u000a  font-size:110%;\u000a  margin-left:15%;\u000a  margin-right:15%;\u000a  margin-top:10px;\u000a  margin-bottom:10px;\u000a  text-indent:30px;\u000a  text-align:justify;\u000a  line-height:150%;\u000a}\u000a\u000a.passage::selection {\u000a  background:#660000;\u000a}\u000a\u000a.passage span {\u000a  color:#660000;\u000a  font-family:dearestregular, "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;\u000a  font-size:2em;\u000a}\u000a\u000a::-moz-selection { background: #660000; color: #fff; text-shadow: none; }\u000a::selection { background: #660000; color: #fff; text-shadow: none; }\u000a\u000a/* ABOUT THE FONTS:\u000a\u000aDearest\u000aCopyright (c) West Wind Fonts. This font is freeware.\u000a\u000a-----------------------------------------------------------\u000a\u000aEBGaramond\u000aCopyright (c) 2010, 2011, 2012 Georg Duffner (http://www.georgduffner.at)\u000a\u000aThis Font Software is licensed under the SIL Open Font License, Version 1.1.\u000aThis license is copied below, and is also available with a FAQ at:\u000ahttp://scripts.sil.org/OFL\u000a\u000a\u000a-----------------------------------------------------------\u000aSIL OPEN FONT LICENSE Version 1.1 - 26 February 2007\u000a-----------------------------------------------------------\u000a\u000aPREAMBLE\u000aThe goals of the Open Font License (OFL) are to stimulate worldwide\u000adevelopment of collaborative font projects, to support the font creation\u000aefforts of academic and linguistic communities, and to provide a free and\u000aopen framework in which fonts may be shared and improved in partnership\u000awith others.\u000a\u000aThe OFL allows the licensed fonts to be used, studied, modified and\u000aredistributed freely as long as they are not sold by themselves. The\u000afonts, including any derivative works, can be bundled, embedded, \u000aredistributed and/or sold with any software provided that any reserved\u000anames are not used by derivative works. The fonts and derivatives,\u000ahowever, cannot be released under any other type of license. The\u000arequirement for fonts to remain under this license does not apply\u000ato any document created using the fonts or their derivatives.\u000a\u000aDEFINITIONS\u000a"Font Software" refers to the set of files released by the Copyright\u000aHolder(s) under this license and clearly marked as such. This may\u000ainclude source files, build scripts and documentation.\u000a\u000a"Reserved Font Name" refers to any names specified as such after the\u000acopyright statement(s).\u000a\u000a"Original Version" refers to the collection of Font Software components as\u000adistributed by the Copyright Holder(s).\u000a\u000a"Modified Version" refers to any derivative made by adding to, deleting,\u000aor substituting -- in part or in whole -- any of the components of the\u000aOriginal Version, by changing formats or by porting the Font Software to a\u000anew environment.\u000a\u000a"Author" refers to any designer, engineer, programmer, technical\u000awriter or other person who contributed to the Font Software.\u000a\u000aPERMISSION & CONDITIONS\u000aPermission is hereby granted, free of charge, to any person obtaining\u000aa copy of the Font Software, to use, study, copy, merge, embed, modify,\u000aredistribute, and sell modified and unmodified copies of the Font\u000aSoftware, subject to the following conditions:\u000a\u000a1) Neither the Font Software nor any of its individual components,\u000ain Original or Modified Versions, may be sold by itself.\u000a\u000a2) Original or Modified Versions of the Font Software may be bundled,\u000aredistributed and/or sold with any software, provided that each copy\u000acontains the above copyright notice and this license. These can be\u000aincluded either as stand-alone text files, human-readable headers or\u000ain the appropriate machine-readable metadata fields within text or\u000abinary files as long as those fields can be easily viewed by the user.\u000a\u000a3) No Modified Version of the Font Software may use the Reserved Font\u000aName(s) unless explicit written permission is granted by the corresponding\u000aCopyright Holder. This restriction only applies to the primary font name as\u000apresented to the users.\u000a\u000a4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font\u000aSoftware shall not be used to promote, endorse or advertise any\u000aModified Version, except to acknowledge the contribution(s) of the\u000aCopyright Holder(s) and the Author(s) or with their explicit written\u000apermission.\u000a\u000a5) The Font Software, modified or unmodified, in part or in whole,\u000amust be distributed entirely under this license, and must not be\u000adistributed under any other license. The requirement for fonts to\u000aremain under this license does not apply to any document created\u000ausing the Font Software.\u000a\u000aTERMINATION\u000aThis license becomes null and void if any of the above conditions are\u000anot met.\u000a\u000aDISCLAIMER\u000aTHE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\u000aEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF\u000aMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\u000aOF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE\u000aCOPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\u000aINCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL\u000aDAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\u000aFROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM\u000aOTHER DEALINGS IN THE FONT SOFTWARE.\u000a\u000a\u000a*/
+p237
+sg23
+VCSS
+p238
+sg25
+g26
+((I2015
+I5
+I1
+I0
+I28
+I23
+I4
+I121
+I1
+tp239
+(dp240
+tp241
+Rp242
+sg31
+(lp243
+Vstylesheet
+p244
+asg33
+g26
+((I2015
+I4
+I27
+I20
+I59
+I1
+I0
+I117
+I1
+tp245
+(dp246
+tp247
+Rp248
+sbsa(dp249
+g14
+I00
+sg15
+(lp250
+F187.2568027210883
+aF174.53061224489815
+asg17
+(itiddlywiki
+Tiddler
+p251
+(dp252
+g21
+V--------------------\u000a\u000aYou currently have:\u000a\u000a<<print $potatoes>> potatoes.\u000a<<print $onions>> onions.\u000a<<print $meatballs>> meatballs.\u000a<<print $water>> litres of water.\u000a<<print $soup>> litres of soup.\u000a<<print $customers>> hungry mouths.\u000a\u000a--------------------
+p253
+sg23
+VInventory
+p254
+sg25
+g26
+((I2015
+I4
+I29
+I0
+I31
+I3
+I2
+I119
+I1
+tp255
+(dp256
+tp257
+Rp258
+sg31
+(lp259
+sg33
+g26
+((I2015
+I4
+I29
+I0
+I30
+I54
+I2
+I119
+I1
+tp260
+(dp261
+tp262
+Rp263
+sbsa(dp264
+g14
+I00
+sg15
+(lp265
+F196.3469387755103
+aF339.9710884353741
+asg17
+(itiddlywiki
+Tiddler
+p266
+(dp267
+g21
+V<span>D</span>ay <<print $day>>.\u000a<<if $hour is 0>>\u000a	12 AM.\u000a<<elseif $hour < 12>>\u000a	<<print $hour>> AM.\u000a<<elseif $hour is 12>>\u000a	12 PM.\u000a<<else>>\u000a	<<print $hour - 12>> PM.\u000a<<endif>>
+p268
+sg23
+VDayAndTime
+p269
+sg25
+g26
+((I2015
+I4
+I29
+I0
+I33
+I44
+I2
+I119
+I1
+tp270
+(dp271
+tp272
+Rp273
+sg31
+(lp274
+sg33
+g26
+((I2015
+I4
+I29
+I0
+I33
+I29
+I2
+I119
+I1
+tp275
+(dp276
+tp277
+Rp278
+sbsa(dp279
+g14
+I00
+sg15
+(lp280
+F710.1428571428572
+aF963.5544217687078
+asg17
+(itiddlywiki
+Tiddler
+p281
+(dp282
+g21
+V<<nobr>>\u000a	<<set $hour to $hour + 1>>\u000a	<<if $hour is 24>>\u000a		<<set $hour to 0>>\u000a		<<set $day to $day + 1>>\u000a	<<endif>>\u000a	<<set $customersfled to ($customers - $customers % 4) / 4>>\u000a	<<set $customers to $customers - $customersfled>>\u000a	<<set $customersshot to ($customers - $customers % 4) / 4 + 1>>\u000a	<<set $customers to $customers - $customersshot>>\u000a	<<set $justvisitedrandom to true>>\u000a<<endnobr>>\u000a<<DayAndTime>>\u000a<<Inventory>>\u000a\u000aA gunfight has broken out in the soup kitchen! A seemingly upset gentleman in a ten-gallon hat is defending his honour against a group of scoundrels whom you quickly deduct have just attempted to beat him at poker with marked cards. That'll teach them not to cheat!\u000a\u000a<<print $customersshot>> hungry mouths, including the pianist, have been shot to death.\u000a\u000a<<print $customersfled>> hungry mouths have fled the soup kitchen.\u000a\u000a[[OK|Main]]\u000a
+p283
+sg23
+VGunFight
+p284
+sg25
+g26
+((I2015
+I5
+I3
+I0
+I2
+I45
+I6
+I123
+I1
+tp285
+(dp286
+tp287
+Rp288
+sg31
+(lp289
+sg33
+g26
+((I2015
+I5
+I1
+I16
+I23
+I45
+I4
+I121
+I1
+tp290
+(dp291
+tp292
+Rp293
+sbsa(dp294
+g14
+I00
+sg15
+(lp295
+F884.6615646258509
+aF972.6564625850342
+asg17
+(itiddlywiki
+Tiddler
+p296
+(dp297
+g21
+V<<nobr>>\u000a	<<set $hour to $hour + 1>>\u000a	<<if $hour is 24>>\u000a		<<set $hour to 0>>\u000a		<<set $day to $day + 1>>\u000a	<<endif>>\u000a	<<set $daysclosed to random(2,4)>>\u000a	<<set $day to $day + $daysclosed>>\u000a	<<set $sleep to random(4,8) * $daysclosed>>\u000a	<<set $tiredness to $tiredness - 8 * $sleep>>\u000a	<<if $tiredness < 0>>\u000a		<<set $tiredness to 0>>\u000a	<<endif>>\u000a	<<if $tiredness >= 100>>\u000a		<<set $tiredness to 99>>\u000a	<<endif>>\u000a	<<set $customersleaving to ($customers - $customers % 4) / 4>>\u000a	<<set $customers to $customers - $customersleaving>>\u000a	<<set $justvisitedrandom to true>>\u000a<<endnobr>>\u000a<<DayAndTime>>\u000a<<Inventory>>\u000a\u000aOh no! The roof is leaking! This is serious. It seems you have no other choice but to close the soup kitchen for <<print $daysclosed>> days, for this is how long you assume it will take to thoroughly investigate and repair the leak.\u000a\u000aMany of the hungry mouths, being poor and homeless, choose to stay and sleep on the floor while waiting for the kitchen to reopen. <<print $customersleaving>> of them, however, eventually get tired of waiting and leave.\u000a\u000a[[OK|Main]]\u000a
+p298
+sg23
+VRoofLeak
+p299
+sg25
+g26
+((I2015
+I5
+I3
+I0
+I2
+I52
+I6
+I123
+I1
+tp300
+(dp301
+tp302
+Rp303
+sg31
+(lp304
+sg33
+g26
+((I2015
+I5
+I2
+I21
+I34
+I4
+I5
+I122
+I1
+tp305
+(dp306
+tp307
+Rp308
+sbsa(dp309
+g14
+I00
+sg15
+(lp310
+F1033.739795918368
+aF981.7465986394565
+asg17
+(itiddlywiki
+Tiddler
+p311
+(dp312
+g21
+V<<nobr>>\u000a	<<set $totalinventoryrange to (100 - ($potatoes + 1) % 100) / ($potatoes + 1) + (100 - ($onions + 1) % 100) / ($onions + 1) + (100 - ($meatballs + 1) % 100) / ($meatballs + 1)>>\u000a	<<set $itemfromrange to random(0,$totalinventoryrange)>>\u000a	<<if $itemfromrange <= (100 - ($potatoes + 1) % 100) / ($potatoes + 1)>>\u000a		<<set $collecteditem to "potatoes">>\u000a	<<elseif $itemfromrange <= (100 - ($potatoes + 1) % 100) / ($potatoes + 1) + (100 - ($onions + 1) % 100) / ($onions + 1)>>\u000a		<<set $collecteditem to "onions">>\u000a	<<else>>\u000a		<<set $collecteditem to "meatballs">>\u000a	<<endif>>\u000a    <<set $collectedamount to random(5,7)>>\u000a	<<if $collecteditem is "potatoes">>\u000a		<<set $collectedamount to $collectedamount * 5 + random(6,9)>>\u000a		<<set $potatoes to $potatoes + $collectedamount>>\u000a	<<elseif $collecteditem is "onions">>\u000a		<<set $collectedamount to $collectedamount * 5 + random(4,7)>>\u000a		<<set $onions to $onions + $collectedamount>>\u000a	<<elseif $collecteditem is "meatballs">>\u000a		<<set $collectedamount to $collectedamount * 5 + random(4,7)>>\u000a		<<set $meatballs to $meatballs + $collectedamount>>\u000a	<<endif>>\u000a	<<set $hour to $hour + 1>>\u000a	<<if $hour is 24>>\u000a		<<set $hour to 0>>\u000a		<<set $day to $day + 1>>\u000a	<<endif>>\u000a	<<set $justvisitedrandom to true>>\u000a<<endnobr>>\u000a<<DayAndTime>>\u000a<<Inventory>>\u000a\u000aOutside the window stands a bearded gentleman in worn-out overalls. He identifies himself as a local farmer. He has heard good things about your soup kitchen and has come to support your valuable work with fresh products straight from the farm.\u000a\u000aHe gives you <<print $collectedamount>> <<print $collecteditem>>.\u000a\u000a[[OK|Main]]\u000a
+p313
+sg23
+VFarmer
+p314
+sg25
+g26
+((I2015
+I5
+I3
+I0
+I16
+I45
+I6
+I123
+I1
+tp315
+(dp316
+tp317
+Rp318
+sg31
+(lp319
+sg33
+g26
+((I2015
+I5
+I3
+I0
+I1
+I1
+I6
+I123
+I1
+tp320
+(dp321
+tp322
+Rp323
+sbsasS'scale'
+p324
+F0.5500467726847517
+sS'snapping'
+p325
+I00
+ss.
